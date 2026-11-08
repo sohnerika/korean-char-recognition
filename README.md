@@ -1,7 +1,11 @@
 # Hangul Character Recognition (한글 문자 인식)
  
-> **This is a long-term personal passion project.** As a Korean, I've always been fascinated by how Hangul is built, and this repo is where I explore that through deep learning. Hangul was created in 1443 by King Sejong the Great and promulgated in 1446 as *Hunminjeongeum* (훈민정음), "the correct sounds for instructing the people," so that ordinary people could read and write without mastering thousands of Chinese characters. In terms of language classification, Korean is generally considered a language isolate (or the main member of the small Koreanic family), and Hangul itself is often classified by linguists as a *featural alphabet*: the consonant shapes depict the mouth and tongue positions used to pronounce them, and the vowels are built from three symbols representing heaven (·), earth (ㅡ), and humanity (ㅣ). That deliberate, almost engineered design is exactly what makes Hangul such an interesting problem for machine learning. This project will grow and change over time as I learn, experiment, and add new ideas.
- 
+This is a long-term personal project. As a Korean, I've always been interested in how Hangul works, particularly how its characters are constructed. I wanted to explore that interest through deep learning and see what I could build with it.
+
+Hangul was created by King Sejong in 1443 and officially introduced in 1446 as Hunminjeongeum (훈민정음), with the goal of making reading and writing accessible to ordinary people. What I find particularly interesting is how systematic its design is. The consonants are based on the positions of the mouth and tongue when producing each sound, while the vowels draw from three basic elements: heaven (·), earth (ㅡ), and humanity (ㅣ). This is why Hangul is often described as a featural alphabet.
+
+That underlying structure makes Hangul an interesting subject for machine learning. I want to experiment with different deep learning approaches, explore how the writing system can be represented computationally, and see where the project takes me. I'll continue building on it as I learn and come across new ideas.
+
 ---
  
 ## About the Project
@@ -52,10 +56,6 @@ Instead of treating recognition as a giant 11,172-class problem, this project ex
 ├── notebooks/      # exploration and visualizations
 └── README.md
 ```
- 
-## Status
- 
-🚧 Early development. This is an ongoing personal project, so expect frequent changes as it evolves.
  
 ## References
  
