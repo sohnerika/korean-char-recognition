@@ -1,6 +1,6 @@
 # Hangul Character Recognition (한글 문자 인식)
  
-As a Korean, I've always been interested in how Hangul works, particularly how its characters are constructed. I wanted to explore that interest through deep learning and see what I could build with it. This is a long-term personal project that I'll continue to expand and improve as I learn and experiment.
+As a Korean, I've always been interested in how Hangul works, particularly how its characters are constructed. I wanted to explore that interest through deep learning and see what I could build with it. This is a long-term personal project that I'll continue to expand and improve as I learn new deep learning techniques.
 
 Hangul was created by King Sejong in 1443 and introduced in 1446 as Hunminjeongeum (훈민정음). It was designed to make reading and writing easier for ordinary people, without requiring them to learn thousands of Chinese characters. One thing I find interesting is how the writing system is structured. The consonants are shaped around the positions of the mouth and tongue when making each sound, while the vowels are built from three symbols representing heaven (·), earth (ㅡ), and humanity (ㅣ). Because of this, Hangul is often described as a featural alphabet. 
 
