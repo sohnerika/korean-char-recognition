@@ -1,16 +1,16 @@
 # Hangul Character Recognition (한글 문자 인식)
  
-This is a long-term personal project. As a Korean, I've always been interested in how Hangul works, particularly how its characters are constructed. I wanted to explore that interest through deep learning and see what I could build with it.
+As a Korean, I've always been interested in how Hangul works, particularly how its characters are constructed. I wanted to explore that interest through deep learning and see what I could build with it. This is a long-term personal project that I'll continue to expand and improve as I learn and experiment.
 
-Hangul was created by King Sejong in 1443 and officially introduced in 1446 as Hunminjeongeum (훈민정음), with the goal of making reading and writing accessible to ordinary people. What I find particularly interesting is how systematic its design is. The consonants are based on the positions of the mouth and tongue when producing each sound, while the vowels draw from three basic elements: heaven (·), earth (ㅡ), and humanity (ㅣ). This is why Hangul is often described as a featural alphabet.
-
+Hangul was created by King Sejong in 1443 and officially introduced in 1446 as *Hunminjeongeum* (훈민정음), with the goal of making reading and writing accessible to ordinary people. What I find particularly interesting is how systematic its design is. The consonants are based on the positions of the mouth and tongue when producing each sound, while the vowels draw from three basic elements: heaven (·), earth (ㅡ), and humanity (ㅣ). This is why Hangul is often described as a *featural alphabet*.
+ 
 That underlying structure makes Hangul an interesting subject for machine learning. I want to experiment with different deep learning approaches, explore how the writing system can be represented computationally, and see where the project takes me. I'll continue building on it as I learn and come across new ideas.
-
+ 
 ---
  
 ## About the Project
  
-Hangul is one of the most systematically designed writing systems in the world. Every syllable block is composed of smaller letters called **jamo**:
+Every Hangul syllable block is composed of smaller letters called **jamo**:
  
 | Component | Options | Example (한) |
 |---|---|---|
@@ -20,7 +20,9 @@ Hangul is one of the most systematically designed writing systems in the world. 
  
 Together these form **11,172 possible syllables**. Many are rare, and some never appear in typical datasets at all.
  
-Instead of treating recognition as a giant 11,172-class problem, this project explores models that understand Hangul's compositional structure, recognizing each jamo separately and assembling them into syllables.
+Instead of treating recognition as one giant classification problem, this project explores a model that understands Hangul's compositional structure, recognizing each jamo separately and assembling them into syllables.
+ 
+To keep the first version focused, the project starts with **printed characters** and the **2,350 most commonly used syllables**.
  
 ## Core Question
  
@@ -28,25 +30,34 @@ Instead of treating recognition as a giant 11,172-class problem, this project ex
  
 ## Approach
  
-- **Baseline:** a standard CNN classifier over all syllable classes
-- **Jamo model:** a shared backbone with three output heads predicting the initial, vowel, and final jamo separately
-- **Compositional test:** deliberately hold out a set of syllables during training and evaluate whether each model can recognize them
-- **Interpretability:** visualize where the model attends when predicting each jamo, to see whether it learns the block layout on its own
+- **Baseline:** a small CNN that classifies each image directly as one of the syllable classes
+- **Jamo model:** the same CNN backbone with three output heads predicting the initial consonant, vowel, and final consonant separately
+- **Compositional test:** deliberately hold out a set of syllables during training (while making sure each of their jamo still appears in other syllables), then compare how well each model recognizes them
 ## Data
  
-- **Synthetic data:** characters rendered in a variety of Korean fonts with random distortions, giving full control over which syllables appear in training
-- **Printed data:** PHD08 [1], a large-scale printed Hangul database covering the 2,350 most common syllables, with 2,187 samples per class (5,139,450 images) varying in font, size, print quality, resolution, binarization, and rotation
-- **Handwritten data:** PE92 [2], a handwritten Korean character image database, and Korean handwriting datasets from AI Hub [3]
-- **Personal test set (planned):** real handwriting samples collected from family and friends
+- **Synthetic data (primary):** 64×64 grayscale images of characters rendered in a variety of Korean fonts with random distortions, giving full control over which syllables appear in training
+- **Printed data (optional):** PHD08 [1], a large-scale printed Hangul database covering the 2,350 most common syllables, with 2,187 samples per class (5,139,450 images) varying in font, size, print quality, resolution, binarization, and rotation
+## Tech Stack
+ 
+- **PyTorch** for models and training
+- **Pillow** for rendering fonts into images
+- **NumPy / Matplotlib** for analysis and plots
 ## Roadmap
  
 - [ ] Synthetic dataset generator
 - [ ] Baseline flat classifier
 - [ ] Three-head jamo model
 - [ ] Held-out syllable (compositional generalization) experiments
-- [ ] Attention / saliency visualizations
-- [ ] Evaluation on real handwriting
-- [ ] Future ideas: few-shot Korean font generation, historical documents, scene text
+- [ ] Write up results
+## Future Ideas
+ 
+Once the core experiment is complete, possible next steps include:
+ 
+- Attention / saliency visualizations to see whether the model learns the block layout on its own
+- Comparing the CNN with a Vision Transformer
+- Extending to all 11,172 syllables
+- Handwritten data, such as PE92 [2] and AI Hub datasets [3], plus a personal test set of handwriting from family and friends
+- Reading old Korean texts and historical documents
 ## Project Structure (planned)
  
 ```
@@ -68,3 +79,4 @@ Instead of treating recognition as a giant 11,172-class problem, this project ex
 ---
  
 *만들고 배우는 과정을 기록하는 프로젝트입니다.*
+ 
