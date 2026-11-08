@@ -72,7 +72,7 @@ Once the core experiment is complete, possible next steps include:
  
 [1] D. S. Ham, D. R. Lee, I. S. Jung, and I. S. Oh, "Construction of Printed Hangul Character Database PHD08," *The Journal of the Korea Contents Association*, vol. 8, no. 11, pp. 33–40, 2008. Available: https://koreascience.kr/article/JAKO200801440596768.page
  
-[2] D. H. Kim et al., "Handwritten Korean Character Image Database PE92," in *Proceedings of the 2nd International Conference on Document Analysis and Recognition (ICDAR '93)*, Tsukuba, Japan, 1993, pp. 470–473. DOI: 10.1109/ICDAR.1993.395693
+[2] D. H. Kim et al., "Handwritten Korean Character Image Database PE92," in *Proceedings of the 2nd International Conference on Document Analysis and Recognition (ICDAR '93)*, 1993, pp. 470–473. DOI: 10.1109/ICDAR.1993.395693
  
 [3] AI Hub, National Information Society Agency (NIA), Republic of Korea. Available: https://aihub.or.kr *(update with the specific dataset name and access date once selected)*
  
