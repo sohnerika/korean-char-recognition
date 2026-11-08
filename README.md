@@ -2,8 +2,8 @@
  
 As a Korean, I've always been interested in how Hangul works, particularly how its characters are constructed. I wanted to explore that interest through deep learning and see what I could build with it. This is a long-term personal project that I'll continue to expand and improve as I learn and experiment.
 
-Hangul was created by King Sejong in 1443 and officially introduced in 1446 as *Hunminjeongeum* (훈민정음), with the goal of making reading and writing accessible to ordinary people. What I find particularly interesting is how systematic its design is. The consonants are based on the positions of the mouth and tongue when producing each sound, while the vowels draw from three basic elements: heaven (·), earth (ㅡ), and humanity (ㅣ). This is why Hangul is often described as a *featural alphabet*.
- 
+Hangul was created by King Sejong in 1443 and introduced in 1446 as Hunminjeongeum (훈민정음). It was designed to make reading and writing easier for ordinary people, without requiring them to learn thousands of Chinese characters. One thing I find interesting is how the writing system is structured. The consonants are shaped around the positions of the mouth and tongue when making each sound, while the vowels are built from three symbols representing heaven (·), earth (ㅡ), and humanity (ㅣ). Because of this, Hangul is often described as a featural alphabet. 
+
 That underlying structure makes Hangul an interesting subject for machine learning. I want to experiment with different deep learning approaches, explore how the writing system can be represented computationally, and see where the project takes me. I'll continue building on it as I learn and come across new ideas.
  
 ---
